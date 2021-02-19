@@ -275,11 +275,14 @@ input:checked + .slider {
   font-size: 16px;
   width: 2rem;
   height: 2rem;
-  color: #fff;
+  color: #fff !important;
   border-radius: 60px;
   text-align: center;
   padding-top: 6px;
   margin-right: 1rem;
+}
+.iconc {
+  color: #fff !important;
 }
 .icon1:hover {
   background-color: var(--yellow);
@@ -290,6 +293,7 @@ input:checked + .slider {
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  color: #fff !important;
 }
 .patternimg {
   position: relative;
