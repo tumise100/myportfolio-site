@@ -1,0 +1,896 @@
+:root {
+  --bgblack: #191919;
+  --white: #FFFFFF;
+  --yellow: #FFFF01;
+  --otherblack: #090909;
+  --overblack : #2D2D2D;
+  --iconblack: #3E3E3E;
+  --otherwhite: #E3E3E3;
+  --formblack: #373737;
+  --otheryellow: #B4B400;
+}
+.dark-theme {
+  --mainbg : var(--bgblack);
+  --textcolor: var(--white);
+  --btncolor: var(--yellow);
+  --iconbgcolor: var(--iconblack);
+  --otherbg: var(--otherblack);
+  --themeSwitchColor: var(--bgblack);
+  --overbg: var(--overblack);
+}
+.light-theme {
+  --mainbg : var(--white);
+  --textcolor: var(--bgblack);
+  --btncolor: var(--yellow);
+  --iconbgcolor: var(--iconblack);
+  --otherbg: var(--otherwhite);
+  --themeSwitchColor: var(--white);
+}
+
+body {
+  background: var(--mainbg);
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color: var(--textcolor);
+  overflow-x: hidden;
+}
+html,body{
+      overflow-x: hidden;
+  }
+nav {
+  background: var(--mainbg);
+}
+.nav-link {
+  color: var(--textcolor) !important; 
+  font-size: 20px;
+}
+.nav-link:hover {
+  color: var(--btncolor) !important;
+}
+.sr-only {
+  color: var(--btncolor) !important;
+}
+.nav-item {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+.navbar-nav {
+  margin-left: 4rem;
+}
+.navbar-brand{
+  margin-left: 150px;
+}
+.navimg {
+  color: var(--textcolor);
+}
+switch {
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch div {
+  position: relative;
+  display: block;
+  background: #eee;
+  width: 40px;
+  border-radius: 50px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.switch div {
+  background-color: var(--textcolor);
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #999;
+  transition: 0.4s;
+  border-radius: 34px;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  position: relative;
+}
+.slider {
+  background-color: var(--themeSwitchColor);
+}
+
+input:checked + .slider {
+  transform: translateX(15px);
+}
+.lightmd {
+  margin-right: 1rem;
+  color: var(--textcolor);
+  width: 30px;
+  height: 30px;
+}
+.darkmd {
+  margin-left: 1rem;
+  margin-right: 150px;
+  color: var(--textcolor);
+  width: 30px;
+  height: 30px;
+}
+
+.moon {
+  color: var(--textcolor);
+  font-size: 50px;
+}
+
+
+
+.navbar-mobile {
+  overflow: hidden;
+  background-color: var(--otherbg);  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10001;
+}
+
+.navbar-mobile a {
+  float: left;
+  display: block;
+  color: var(--textcolor);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-mobile a:hover {
+  color: var(--btncolor) !important;
+}
+
+.navbar-mobile a.active {
+  background-color: var(--iconbgcolor);
+  color: white;
+}
+
+.navbar-mobile .icon {
+  display: none;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-mobile a:not(:first-child) {display: none;}
+  .navbar-mobile a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-mobile.responsive .icon {
+    position: absolute;
+    right: 0;
+    bottom:0;
+  }
+  .navbar-mobile.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+.headerbg {
+  position: relative;
+}
+.bgimg1 {
+  width: 30%;
+  position: absolute;
+  top: 15rem;
+}
+.bgimg2 {
+  width: 30%;
+  position: absolute;
+  top: 15rem;
+}
+.bgimg3 {
+  width: 30%;
+  position: absolute;
+  top: 15rem;
+  right: 0.5rem;
+}
+.bgimg4 {
+  width: 30%;
+  position: absolute;
+  top: 15rem;
+  right: 0.5rem;
+}
+.profilepic {
+  display: flex;
+  justify-content: center;
+}
+.profileimg {
+  margin-top: 10rem;
+  width: 10%;
+}
+.profilename {
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.hand {
+  width: 60%;
+  margin-left: 1rem;
+}
+.profiletext {
+  display: flex;
+  justify-content: center;
+}
+.profiletext1 {
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 5rem;
+}
+.profiletextsub {
+  display: flex;
+  justify-content: center;
+}
+.profiletextsub1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 2rem;
+  opacity: 80%;
+}
+.btn-profile {
+  border-radius: 40px;
+  background-color: var(--yellow);
+  color: var(--bgblack);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: bolder;
+  margin-top: 1rem;
+  border: none;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 0, 0.45);
+}
+.btn-profile:hover {
+  background-color: #FFFF67;
+  color: #000;
+  border: none;
+}
+.profilebtn {
+  display: flex;
+  justify-content: center;
+}
+
+.icon1 {
+  background-color: var(--iconbgcolor);
+  font-size: 16px;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  border-radius: 60px;
+  text-align: center;
+  padding-top: 6px;
+  margin-right: 1rem;
+}
+.icon1:hover {
+  background-color: var(--yellow);
+  color: #000;
+}
+.profileicon {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.patternimg {
+  position: relative;
+}
+.pattern {
+  position: absolute;
+  width: 103%;
+  z-index: 30;
+  left: -2rem;
+}
+.resumebg {
+  padding-top: 4rem;
+  position: relative;
+  z-index: 29;
+ 
+}
+.knowme {
+  font-weight: bold;
+}
+.arrow {
+  margin-top: 10px;
+  font-size: 50px;
+  color: var(--textcolor);
+  width: 20%;
+
+}
+.btn-resume {
+  background-color: var(--yellow);
+  border-radius: 50px;
+  color: var(--bgblack);
+  font-weight: 700;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 0, 0.45);
+  
+}
+.btn-resume:hover {
+  background-color: #FFFF67;
+  color: #000;
+  border: none;
+}
+.resumebg {
+  background-color: var(--otherbg);
+  padding-bottom: 3rem;
+  padding-right: 1rem;
+}
+
+.me1 {
+  width: 450px;
+  height: 150px;
+  background-color: var(--iconbgcolor);
+  border-radius: 10px;
+  transition-duration: 0.7s;
+  transition-property: transform;
+}
+.me1:hover {
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+.me1:hover,
+.me1:focus,
+.me1:active {
+    transform: scale(1.05);
+}
+.me2 {
+  margin-top: 8rem;
+  z-index: 10;
+}
+.me3 {
+  z-index: 9;
+}
+.me4 {
+  z-index: 8;
+}
+.metitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.mesubtext {
+  margin-left: 2rem;
+  color: var(--btncolor);
+  font-size: 24px;
+  margin-top: 1.5rem;
+}
+.mesubicon {
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+}
+.mesubtitle {
+  font-size: 12px;
+  margin-left: 2rem;
+  opacity: 50%;
+  color: #fff;
+}
+.sublink {
+  margin-left: 2rem;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #fff;
+}
+.sublink:hover {
+  color: var(--btncolor);
+}
+.subimg {
+  width: 450px;
+}
+.introduce {
+  margin-top: 8rem;
+}
+.intro {
+  font-size: 18px;
+  opacity: 70%;
+}
+.intronametext {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 2rem;
+}
+.introinfotext {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 2rem;
+  opacity: 70%;
+}
+.workline {
+  width: 45px;
+  height: 2px;
+  background-color: var(--textcolor);
+  margin-top: 1rem;
+}
+.worktext {
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--btncolor);
+  margin-left: 1rem;
+}
+.work {
+  display: flex;
+  margin-top: 8rem;
+}
+
+
+
+
+.row {
+  margin: 10px -16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  padding: 10px;
+  position: relative;
+}
+.visitpage {
+  font-size: 14px;
+  background-color: var(--btncolor);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000 !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 110px;
+}
+.porttitle {
+  margin-top: 10px;
+}
+
+.content .overlay{
+  visibility: hidden;
+}
+.overlay {
+  width: 335px;
+  height: 358px;
+  background-color: #000;
+  opacity: 90%;
+  position: absolute;
+}
+
+.content:hover .overlay{
+  visibility: visible;
+  left: 10px;
+  top: 10px;
+  bottom: 0;
+  right: 0;
+}
+.overlay-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--btncolor);
+  border-radius: 10px;
+  box-shadow: -8px -8px 0px 0px rgba(214, 214, 214, 0.5);
+  margin-top: 7rem;
+  margin-left: 9rem;
+}
+.overlay-text {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 2rem;
+  text-align: center;
+  color: #fff;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+#myBtnContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn1 {
+  padding: 12px 16px;
+  color: var(--textcolor);
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.btn1:hover {
+  opacity: 100%;
+}
+
+.btn1.active {
+  color: var(--textcolor);
+  opacity: 100%;
+}
+
+
+
+
+.contactline {
+  width: 45px;
+  height: 2px;
+  background-color: var(--textcolor);
+  margin-top: 1rem;
+}
+.contacttext {
+  font-size: 25px;
+  font-weight: bolder;
+  color: var(--btncolor);
+  margin-left: 1rem;
+}
+.contact {
+  display: flex;
+  margin-top: 3rem;
+}
+.contactsubtext {
+  font-size: 16px;
+  opacity: 70%;
+}
+form {
+  margin-top: 2rem;
+}
+form label {
+  font-size: 16px;
+  opacity: 70%;
+}
+
+.form-control {
+  background-color: #373737;
+  border-radius: 10px;
+}
+.contactbg {
+  background-color: var(--otherbg);
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+
+.contactsocial {
+  width: 420px;
+  height: 110px;
+  background-color: #171717;
+  margin-top: 1rem;
+}
+.socialiconn {
+  background-color: #3E3E3E;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #FFFF01;
+  padding-top: 10px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.socialtextt {
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  color: #fff;
+  opacity: 70%;
+}
+.sociall {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profileicon1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: -2.5rem;
+}
+.icon2 {
+  background-color: #3E3E3E;
+  font-size: 16px;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  border-radius: 60px;
+  text-align: center;
+  padding-top: 6px;
+  margin-right: 0.5rem;
+}
+.icon2:hover {
+  background-color: #FFFF01;
+  color: #000;
+}
+.socialtextsub {
+  font-size: 10px;
+  margin-left: 4rem;
+  color: #fff;
+}
+.socialtextsub1 {
+  font-size: 12px;
+  margin-left: -1rem;
+  color: #fff;
+}
+.socialtextsub1 p span {
+  margin-left: 12px;
+  color: #fff;
+}
+.socialtextsub11 {
+  font-size: 12px;
+  margin-left: -3rem;
+  color: #fff;
+}
+.designit {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.modal {
+  background-color: #000 !important;
+}
+.modal-content {
+  background-color: var(--otherbg);
+}
+.close {
+  color: var(--textcolor);
+}
+.modal-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--btncolor);
+  margin-left: 0.8rem;
+}
+.modal-subtitletext {
+  font-size: 16px;
+  opacity: 50%;
+}
+.eduheadtext {
+  font-size: 35px;
+  font-weight: bolder;
+}
+.educircle {
+  width: 20px;
+  height: 20px;
+  background-color: var(--btncolor);
+  border-radius: 40px;
+  margin-top: 2rem;
+}
+.edulines {
+  width: 1px;
+  height: 150px;
+  background-color: #fff;
+  margin-left: 9px;
+}
+.edutexthead {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--btncolor);
+}
+.edutextdate {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--iconbgcolor);
+  padding-right: 2rem;
+  padding-left: 2rem;
+  width: 180px;
+  margin-top: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.edutextschool {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.edurow {
+  display: flex;
+}
+.edutext {
+  margin-top: 1.9rem;
+  margin-left: 1.5rem;
+}
+.edurow1, .edurow2 {
+  margin-top: -1.9rem;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  html,body{
+      overflow-x: hidden;
+  }
+  .navbar-brand{
+    position: relative;
+    margin-left: 60px;
+    margin-top: -5px;
+  }
+  .navimg{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  .mobileld {
+    margin-right: 1rem;
+    position: absolute;
+    left: 7rem;
+
+  }
+
+  .fa-adjust {
+    transform: rotate(180deg);
+    margin-right: 10px;
+  }
+  .profileimg {
+    margin-top: 9rem;
+    width: 30%;
+  }
+  .profilename {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .hand {
+    width: 40%;
+    margin-left: 10px;
+  }
+  .profiletext1 {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 2.5rem;
+  }
+  .profiletextsub1 {
+    font-size: 14px;
+  }
+  .icon1 {
+    margin-right: 0.5rem;
+  }
+  .pattern {
+    width: 110%;
+    margin-left: -7px;
+  }
+  .arrow {
+    transform: rotate(90deg);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .arroww {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .btn-resume {
+    margin-left: 0px;
+  }
+  .knowme {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .me1 {
+  width: auto;
+  margin-bottom: 0.6rem;
+  }
+  .subimg {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .subimg2 {
+  
+    width: 100%;
+  }
+  .subimg3 {
+ 
+    width: 100%;
+  }
+  .mesubtext {
+    font-size: 20px;
+  }
+  .mesubicon {
+    width: 30%;
+  }
+  .mesubtitle {
+    font-size: 10px;
+    opacity: 90%;
+    color: #fff;
+  }
+  .sublink {
+    margin-left: 2rem;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #fff;
+  }
+  .contactsocial {
+    width: auto;
+  }
+  .contact-right {
+    margin-top: 2rem;
+  }
+  .socialtextt h3 {
+    font-size: 20px;
+  }
+  .socialiconn {
+    margin-left: 1rem;
+  }
+  .designit {
+    margin-bottom: 4rem;
+    font-size: 12px;
+    text-align: center;
+  }
+  .modal-footer {
+    padding-bottom: 4rem;
+  }
+  .eduhead1 {
+    margin-top: 3rem;
+  }
+  .column {
+    float: none;
+    width: 100%;
+  }
+  .overlay {
+    width: 311px;
+    height: 334px;
+    background-color: #000;
+    opacity: 90%;
+    position: absolute;
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .navbar-mobile  {
+  display: none !important;
+  }
+}
+
