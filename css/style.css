@@ -286,7 +286,7 @@ input:checked + .slider {
 }
 .icon1:hover {
   background-color: var(--yellow);
-  color: #000;
+  color: #000 !important;
 }
 .profileicon {
   display: flex;
@@ -882,6 +882,16 @@ form label {
     background-color: #000;
     opacity: 90%;
     position: absolute;
+  }
+  .socialtextsub1 {
+    margin-left: 2rem;
+    font-size: 11px;
+  }
+  .socialtextsub11 {
+    margin-left: 2rem;
+  }
+  .icon22 {
+    margin-left: 2rem;
   }
 }
 
