@@ -2,5 +2,4 @@
 
 My portfolio website hosted at
 
-
-ayobami.netlify.app
+https://ayobami.netlify.app/
